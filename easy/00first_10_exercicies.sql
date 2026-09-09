@@ -1,0 +1,10 @@
+select first_name, last_name from patients where allergies is null;
+select first_name, last_name from patients where weight between 100 and 120 ;
+update patients set allergies = 'NKA' where allergies is null;
+select concat(first_name, ' ',last_name) as full_name from patients;
+select first_name, last_name from patients where allergies is null;
+select p.first_name, p.last_name, pn.province_name from patients as p inner join province_names as pn on pn.province_id = p.province_id;
+select count(*) from patients where birth_date like '2010%';
+select first_name, last_name, height from patients order by height desc limit 1;
+select * from patients where patient_id in (1,45,534,879,1000);
+select count(*) from admissions;
